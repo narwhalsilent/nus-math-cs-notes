@@ -1,5 +1,7 @@
 # NUS Maths and CS Notes
 
+Author: Wang Junwu
+
 Source code written in Typst.
 
 ## AY 22/23 Sem 2

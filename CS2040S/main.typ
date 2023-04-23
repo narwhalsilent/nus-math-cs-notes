@@ -182,8 +182,11 @@
 == HashSet
 
 - Probability of *no* false positive with SUHA \~ $e^(-alpha)$.
+- *Bloom filter*: Use multiple hash functions instead of one.
 
 = Graphs
+
+- *Diameter*: Length of longest all pairs shortest path.
 
 == Searching
 
@@ -196,7 +199,7 @@
 - *Bellman-Ford* $O(V E)$
   - *Algorithm*: Use every edge to relax distance. Repeat until an entire iteration
     changes nothing.
-  - *Invariant*: After $j$-th iteration, vertices $j$ hops away have correct estimate.
+  - *Invariant*: After $j$-th iteration, vertices whose shortest path is $<=j$ hops long have the correct estimate.
   - *Negative cycle*: If on $(V+1)$-th iteration there is still change, there is negative cycle.
   
 - *Dijkstra* $O(E log V)$, non-negative edges:
@@ -211,13 +214,13 @@
     
 - *Tree* $O(V)$: Path is unique, so just BFS/DFS.
 
+== Minimal Spanning Tree (MST)
+
 === Properties
 
 - *Substructure*: The two components after a cut are both MSTs.
 - *Cycle*: For every cycle, the largest is *not* in MST.
 - *Cut*: For every cut, the smallest one is in *all* MSTs.
-
-== Minimal Spanning Tree (MST)
 
 === Algorithms
 
